@@ -135,7 +135,10 @@ set(ORDER_LIST
     "hpp_swapchain_images"
     
     #General Samples
-    "mobile_nerf")
+    "mobile_nerf"
+    #Custom
+     "ddf_files"
+)
 
 # Orders the sample ids by the order list above
 set(ORDERED_LIST)
