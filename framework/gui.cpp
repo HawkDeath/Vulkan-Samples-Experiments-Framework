@@ -109,21 +109,21 @@ Gui::Gui(VulkanSample &sample_, const Window &window, const Stats *stats,
 
 	// Color scheme
 	style.Colors[ImGuiCol_WindowBg]         = ImVec4(0.005f, 0.005f, 0.005f, 0.94f);
-	style.Colors[ImGuiCol_TitleBg]          = ImVec4(1.0f, 0.0f, 0.0f, 0.6f);
-	style.Colors[ImGuiCol_TitleBgActive]    = ImVec4(1.0f, 0.0f, 0.0f, 0.8f);
-	style.Colors[ImGuiCol_MenuBarBg]        = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
-	style.Colors[ImGuiCol_Header]           = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
-	style.Colors[ImGuiCol_HeaderActive]     = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
-	style.Colors[ImGuiCol_HeaderHovered]    = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
+	style.Colors[ImGuiCol_TitleBg]          = ImVec4(0.552f, 0.337f, 0.258f, 0.6f);
+	style.Colors[ImGuiCol_TitleBgActive]    = ImVec4(0.552f, 0.337f, 0.258f, 0.8f);
+	style.Colors[ImGuiCol_MenuBarBg]        = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
+	style.Colors[ImGuiCol_Header]           = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
+	style.Colors[ImGuiCol_HeaderActive]     = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
+	style.Colors[ImGuiCol_HeaderHovered]    = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
 	style.Colors[ImGuiCol_FrameBg]          = ImVec4(0.0f, 0.0f, 0.0f, 0.8f);
 	style.Colors[ImGuiCol_CheckMark]        = ImVec4(0.0f, 1.0f, 0.0f, 1.0f);
-	style.Colors[ImGuiCol_SliderGrab]       = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
-	style.Colors[ImGuiCol_SliderGrabActive] = ImVec4(1.0f, 0.0f, 0.0f, 0.8f);
+	style.Colors[ImGuiCol_SliderGrab]       = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
+	style.Colors[ImGuiCol_SliderGrabActive] = ImVec4(0.552f, 0.337f, 0.258f, 0.8f);
 	style.Colors[ImGuiCol_FrameBgHovered]   = ImVec4(1.0f, 1.0f, 1.0f, 0.1f);
 	style.Colors[ImGuiCol_FrameBgActive]    = ImVec4(1.0f, 1.0f, 1.0f, 0.2f);
-	style.Colors[ImGuiCol_Button]           = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
-	style.Colors[ImGuiCol_ButtonHovered]    = ImVec4(1.0f, 0.0f, 0.0f, 0.6f);
-	style.Colors[ImGuiCol_ButtonActive]     = ImVec4(1.0f, 0.0f, 0.0f, 0.8f);
+	style.Colors[ImGuiCol_Button]           = ImVec4(0.552f, 0.337f, 0.258f, 0.4f);
+	style.Colors[ImGuiCol_ButtonHovered]    = ImVec4(0.552f, 0.337f, 0.258f, 0.6f);
+	style.Colors[ImGuiCol_ButtonActive]     = ImVec4(0.552f, 0.337f, 0.258f, 0.8f);
 
 	// Borderless window
 	style.WindowBorderSize = 0.0f;
