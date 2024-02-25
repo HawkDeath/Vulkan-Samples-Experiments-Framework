@@ -8,7 +8,10 @@ add_sample_with_tags(
         AUTHOR "Patryk Jastrzebski"
         NAME "ddf file loader"
         DESCRIPTION "ddf file loader"
-        SHADER_FILES_GLSL
-#        "ddf_files/base.vert"
+        FILES
+        "img_archive.h"
+        "img_archive.cpp"
+
+        #"ddf_files/base.vert"
 #        "ddf_files/base.frag"
 )

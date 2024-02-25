@@ -1,5 +1,7 @@
 #include "ddf_files.h"
 
+#include "img_archive.h"
+
 ddf_files::ddf_files()
 {
 	title = "ddf_files";
@@ -18,7 +20,9 @@ bool ddf_files::prepare(const vkb::ApplicationOptions &options)
 	{
 		return false;
 	}
+	load_assets();
 
+	build_command_buffers();
 	prepared = true;
 	return true;
 }
@@ -30,6 +34,15 @@ void ddf_files::request_gpu_features(vkb::PhysicalDevice &gpu)
 	{
 		requested_features.samplerAnisotropy = VK_TRUE;
 	}
+}
+
+void ddf_files::load_assets()
+{
+	img_archive gta3_archive {"/home/hawkdeath/Projects/Games/Grand Theft Auto San Andreas/models/gta3.img"};
+	// gta3_archive.print_all_archives();
+	auto model = gta3_archive.get_archive_by_name("speeder.dff");
+	auto buff = model->file_buffer;
+	auto s = buff.size();
 }
 
 void ddf_files::render(float delta_time)

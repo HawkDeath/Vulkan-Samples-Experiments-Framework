@@ -16,6 +16,7 @@ class ddf_files : public ApiVulkanSample
 	void build_command_buffers() override;
   private:
 	void draw();
+	void load_assets();
 
   private:
 };
