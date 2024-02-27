@@ -11,6 +11,8 @@ add_sample_with_tags(
         FILES
         "img_archive.h"
         "img_archive.cpp"
+        "ddf_file.h"
+        "ddf_file.cpp"
 
         #"ddf_files/base.vert"
 #        "ddf_files/base.frag"

@@ -1,6 +1,9 @@
 #pragma once
 
 #include "api_vulkan_sample.h"
+#include "img_archive.h"
+#include "ddf_file.h"
+#include <memory>
 
 class ddf_files : public ApiVulkanSample
 {
@@ -19,6 +22,10 @@ class ddf_files : public ApiVulkanSample
 	void load_assets();
 
   private:
+	std::unique_ptr<img_archive> gta3_archive;
+	std::vector<std::string> archive_file_list;
+
+	std::shared_ptr<ddf_file> model;
 };
 
 std::unique_ptr<vkb::Application> create_ddf_files();

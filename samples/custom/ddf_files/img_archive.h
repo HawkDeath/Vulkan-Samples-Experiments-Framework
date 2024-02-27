@@ -28,12 +28,14 @@ class img_archive
 {
   public:
 	explicit img_archive(const std::string &file_path);
-	~img_archive() = default;
+	~img_archive();
 
 	std::shared_ptr<img_archive_file> get_archive_by_name(const std::string &archive_name);
 	uint32_t get_number_of_entries() const { return archive_entries.size(); }
 
 	void print_all_archives();
+
+	std::vector<std::string> get_file_list();
 
   private:
 	void open_file_and_parse();
