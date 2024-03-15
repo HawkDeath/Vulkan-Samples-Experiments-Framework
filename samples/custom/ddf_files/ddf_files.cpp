@@ -40,7 +40,16 @@ void ddf_files::request_gpu_features(vkb::PhysicalDevice &gpu)
 
 void ddf_files::load_assets()
 {
-	gta3_archive = std::make_unique<img_archive>("/Users/hawkdeath/Games/Grand Theft Auto San Andreas/models/gta3.img");
+#ifdef WIN32
+	std::string path;
+#elif  __APPLE__
+	std::string path = "/Users/hawkdeath/Games";
+#else
+	std::string path = "/home/hawkdeath/Projects/Games";
+#endif
+	std::string game_path = "Grand Theft Auto San Andreas/models/gta3.img";
+	std::string full_game_path = path + "/" + game_path;
+	gta3_archive = std::make_unique<img_archive>(full_game_path);
 
 	archive_file_list = gta3_archive->get_file_list();
 	archive_file_list.erase(std::remove_if(archive_file_list.begin(), archive_file_list.end(), [&](const std::string &s) {
